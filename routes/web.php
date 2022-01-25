@@ -24,3 +24,10 @@ Route::get('/new', function () {
 Route::get('/test', function () {
     return view('test');
 });
+
+Route::get('/news', [\App\Http\Controllers\NewsController::class, 'index']);
+Route::get('/news/card/{id}', [\App\Http\Controllers\NewsController::class, 'card']);
+ 
+Route::get('/admin', [\App\Http\Controllers\Admin\IndexController::class, 'index']);
+ 
+Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index']);
